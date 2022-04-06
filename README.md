@@ -33,3 +33,5 @@ code .
 }
 
 Here is a tutorial on how to create custom shell commands if you need it (I sure did). https://medium.com/devnetwork/how-to-create-your-own-custom-terminal-commands-c5008782a78e
+
+I have also migrated my finished solutions to separate files so the repo can be cloned and worked on from scratch. Just remember to temporarily disable the specs with "xit".
