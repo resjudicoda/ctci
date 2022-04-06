@@ -11,13 +11,9 @@ const rotate_matrix = function(matrix) {
       // row[2][2] -> row[2][0]
       // row[2][0] -> row[0][0]
 
+      // got some help from leetcode
       // need to perform a swap of four values
       // only need to use n, i, j, and 1
-      // let temp = matrix[i][j]; // cell 0, 0
-      // matrix[i][j] = matrix[n - 1 - j][i]; // 2, 0 -> 0,0
-      // matrix[n - 1 - j][i] = matrix[n - 1 - j][n - 1 - j] // 2,2 -> 2,0
-      // matrix[n - 1 - j][n - 1 - j] = matrix[i][n - 1 - j] // 0,2 -> 2,2
-      // matrix[i][j] = temp; // temp (0,0) -> 0, 2
 
       let temp = matrix[n - 1 - j][i];
       matrix[n - 1 - j][i] = matrix[n - 1 - i][n - j - 1];
@@ -26,7 +22,6 @@ const rotate_matrix = function(matrix) {
       matrix[i][j] = temp;
     }
   }
-  console.log('matrix', matrix)
   return matrix;
 }
 module.exports = rotate_matrix
