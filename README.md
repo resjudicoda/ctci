@@ -6,7 +6,7 @@ The solutions here are all or mostly mine. I try to include comments in solution
 
 To help with the repetition of coding and testing, I wrote a custom shell command that takes one argument from the shell, creates a directory with that argument name, moves into that directory, creates template .js and spec.js files (again with the argument name), and then opens those files in VSCode.
 
-For example, running "problem is_unique" from the shell creates a directory called "is_unique." The new directory will have two files called "is_unique.js" and "is_unique.spec.js", each populated with some working template code. Running "jasmine is_unique.spec.js" will run the tests (assumign you have Jasmine installed). Changing the function in your .js file to return 'true' will get the test in the .spec.js file passing. From there, its up to you.
+For example, running "problem is_unique" from the shell creates a directory called "is_unique." The new directory will have three files called "is_unique.js", "is_unique.spec.js", and "is_unique_solution.js", each populated with some working template code. Running "jasmine is_unique.spec.js" will run the tests (assuming you have Jasmine installed). Changing the function in your .js file to return 'true' will get the test in the .spec.js file passing. From there, its up to you.
 
 The shell command function is:
 
@@ -34,4 +34,4 @@ code .
 
 Here is a tutorial on how to create custom shell commands if you need it (I sure did). https://medium.com/devnetwork/how-to-create-your-own-custom-terminal-commands-c5008782a78e
 
-I have also migrated my finished solutions to separate files so the repo can be cloned and worked on from scratch. Just remember to temporarily disable the specs with "xit".
+I have migrated my finished solutions to separate files so the repo can be cloned and worked on from scratch. Just remember to temporarily disable the specs with "xit".
