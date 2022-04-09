@@ -5,11 +5,6 @@ const rotate_matrix = function(matrix) {
 
   for (let i = 0; i < Math.floor((n + 1) / 2); i++) {
     for (let j = 0; j < Math.floor(n / 2); j++) {
-      // need
-      // row[0][0] -> row[0][2]
-      // row[0][2] -> row[2][2]
-      // row[2][2] -> row[2][0]
-      // row[2][0] -> row[0][0]
 
       // got some help from leetcode
       // need to perform a swap of four values

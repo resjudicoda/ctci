@@ -33,11 +33,5 @@ const string_rotation = function(str1, str2) {
     }
   }
   return false;
-  // ctci
-  // think of string as 2 elements x and y based on where the split is
-  // so if rotations, one will be xy and the other yx
-  // xyxy contains yx, so just double the first string and check for includes
-  // let double = str1 + str1;
-  // return double.includes(str2);
 }
 module.exports = string_rotation

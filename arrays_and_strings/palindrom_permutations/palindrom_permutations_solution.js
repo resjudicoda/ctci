@@ -1,5 +1,6 @@
 const palindrom_permutations = function(str) {
     if (!str || typeof(str) != 'string') return false
+    // struggled not to brute force this one, looked to answer for guidance
     // palindromes can only have exactly 0 or 1 odd letters
     // so count em up and return false if it fails
     let cache = {};
