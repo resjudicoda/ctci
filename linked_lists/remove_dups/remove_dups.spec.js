@@ -26,7 +26,7 @@ describe('remove_dups', function() {
     )
   })
 
-  it('can call a function on each node', function() {
+  xit('can call a function on each node', function() {
     list.addToTail(testItem).addToTail({id: 002}).addToTail({id: 003});
     const ids = [];
     const getIds = (node) => {
@@ -36,7 +36,7 @@ describe('remove_dups', function() {
     expect(ids).toEqual([001, 002, 003])
   })
 
-  it('can remove duplicates', function() {
+  xit('can remove duplicates', function() {
     list.addToTail(001).addToTail(002).addToTail(003).addToTail(002);
     remove_dups(list)
     const ids = [];
@@ -47,7 +47,7 @@ describe('remove_dups', function() {
     expect(ids).toEqual([001, 002, 003])
   });
 
-  it('can remove duplicates from middle of list', function() {
+  xit('can remove duplicates from middle of list', function() {
     list.addToTail(001).addToTail(002).addToTail(003).addToTail(002).addToTail(004);
     remove_dups(list)
     const ids = [];
@@ -58,7 +58,7 @@ describe('remove_dups', function() {
     expect(ids).toEqual([001, 002, 003, 004])
   });
 
-  it('can remove multiple duplicates', function() {
+  xit('can remove multiple duplicates', function() {
     list.addToTail(001).addToTail(002).addToTail(003).addToTail(002).addToTail(004).addToTail(002);
     remove_dups(list)
     const ids = [];
@@ -69,7 +69,7 @@ describe('remove_dups', function() {
     expect(ids).toEqual([001, 002, 003, 004])
   });
 
-  it('can remove multiple duplicates', function() {
+  xit('can remove multiple duplicates', function() {
     list.addToTail(001).addToTail(002).addToTail(001).addToTail(003).addToTail(002).addToTail(004).addToTail(002);
     remove_dups(list)
     const ids = [];
