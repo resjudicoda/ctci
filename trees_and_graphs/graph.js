@@ -20,7 +20,7 @@ class Graph {
       if (children && children.length) {
         children.forEach((child) => {
             newChildren.push(this.nodes.filter((node) => {
-                node.id = child;
+                node.id == child;
             }))
         })
       }
