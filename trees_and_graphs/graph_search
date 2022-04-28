@@ -1,3 +1,14 @@
+const depth_first_search = function (node, visiter) {
+    visiter(node)
+    node.visited = true;
+    if (node.children && node.children.length) {
+        node.children.forEach((child) => {
+            if (!child.visited) depth_first_search(child, visiter)
+        })
+    }
+    return;
+}
+
 const breadth_first_search = function (node, visitor) {
     let queue = [];
     queue.push(node)
@@ -18,4 +29,4 @@ const breadth_first_search = function (node, visitor) {
     return;
 }
 
-module.exports = breadth_first_search
+module.exports = {depth_first_search, breadth_first_search}
