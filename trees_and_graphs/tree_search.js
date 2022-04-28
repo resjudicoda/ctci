@@ -1,32 +1,34 @@
-const depth_first_search = function (node, visiter) {
-    visiter(node)
-    node.visited = true;
-    if (node.children && node.children.length) {
-        node.children.forEach((child) => {
-            if (!child.visited) depth_first_search(child, visiter)
-        })
+const depth_first_search = function (tree, nodes = []) {
+    if (!tree) {
+        return false;
     }
-    return;
+    nodes.push(tree.value)
+    if (tree.left) {
+        depth_first_search(tree.left, nodes);
+    }
+    if (tree.right) {
+        depth_first_search(tree.right, nodes);
+    }
+    return nodes;
 }
 
-const breadth_first_search = function (node, visitor) {
+const breadth_first_search = function (tree) {
     let queue = [];
-    queue.push(node)
+    let nodes = [];
+    queue.push(tree)
     let current;
     while (queue.length) {
       current = queue.shift();
-      visitor(current)
-      current.visited = true;
-      if (current.children && current.children.length) {
-          current.children.forEach((child) => {
-              if (!child.visited) {
-                child.visited = true;
-                queue.push(child)
-              }
-          })
+      nodes.push(current.value)
+      //current.visited = true;
+      if (current.left) {
+          queue.push(current.left);
+      }  
+      if (current.right) {
+          queue.push(current.right);
       }
     }
-    return;
+    return nodes;
 }
 
 module.exports = {depth_first_search, breadth_first_search}

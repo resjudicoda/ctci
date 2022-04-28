@@ -1,5 +1,3 @@
-// for graph
-
 const {depth_first_search, breadth_first_search} = require('./graph_search');
 const {DirectedGraph} = require('./directed_graph')
 
@@ -23,11 +21,11 @@ describe('depth first search', function () {
         .connect(4, [6])
         .connect(5, [1, 3])
         let visited = [];
-        function visiter(node) {
+        function visitor(node) {
             visited.push(node.id)
         }
         let node0 = graph.nodes[0];
-        depth_first_search(node0, visiter);
+        depth_first_search(node0, visitor);
         expect(visited).toEqual([0]);
     })
 
@@ -45,11 +43,11 @@ describe('depth first search', function () {
         .connect(4, [6])
         .connect(5, [1, 3])
         let visited = [];
-        function visiter(node) {
+        function visitor(node) {
             visited.push(node.id)
         }
         let node1 = graph.nodes[1];
-        depth_first_search(node1, visiter);
+        depth_first_search(node1, visitor);
         expect(visited).toEqual([1, 0]);
     })
 
@@ -67,11 +65,11 @@ describe('depth first search', function () {
         .connect(4, [6])
         .connect(5, [1, 3])
         let visited = [];
-        function visiter(node) {
+        function visitor(node) {
             visited.push(node.id)
         }
         let node2 = graph.nodes[2];
-        depth_first_search(node2, visiter);
+        depth_first_search(node2, visitor);
         expect(visited).toEqual([2, 0, 1, 6]);
     })
 
@@ -89,11 +87,11 @@ describe('depth first search', function () {
         .connect(4, [6])
         .connect(5, [1, 3])
         let visited = [];
-        function visiter(node) {
+        function visitor(node) {
             visited.push(node.id)
         }
         let node5 = graph.nodes[5];
-        depth_first_search(node5, visiter);
+        depth_first_search(node5, visitor);
         expect(visited).toEqual([5, 1, 0, 3]);
     })
 })
@@ -118,11 +116,11 @@ describe('breadth first search', function () {
         .connect(4, [6])
         .connect(5, [1, 3])
         let visited = [];
-        function visiter(node) {
+        function visitor(node) {
             visited.push(node.id)
         }
         let node0 = graph.nodes[0];
-        breadth_first_search(node0, visiter);
+        breadth_first_search(node0, visitor);
         expect(visited).toEqual([0]);
     })
 
@@ -140,11 +138,11 @@ describe('breadth first search', function () {
         .connect(4, [6])
         .connect(5, [1, 3])
         let visited = [];
-        function visiter(node) {
+        function visitor(node) {
             visited.push(node.id)
         }
         let node1 = graph.nodes[1];
-        breadth_first_search(node1, visiter);
+        breadth_first_search(node1, visitor);
         expect(visited).toEqual([1, 0]);
     })
 
@@ -162,11 +160,11 @@ describe('breadth first search', function () {
         .connect(4, [6])
         .connect(5, [1, 3])
         let visited = [];
-        function visiter(node) {
+        function visitor(node) {
             visited.push(node.id)
         }
         let node2 = graph.nodes[2];
-        breadth_first_search(node2, visiter);
+        breadth_first_search(node2, visitor);
         expect(visited).toEqual([2, 0, 1, 6]);
     })
 
@@ -184,11 +182,11 @@ describe('breadth first search', function () {
         .connect(4, [6])
         .connect(5, [1, 3])
         let visited = [];
-        function visiter(node) {
+        function visitor(node) {
             visited.push(node.id)
         }
         let node5 = graph.nodes[5];
-        breadth_first_search(node5, visiter);
+        breadth_first_search(node5, visitor);
         expect(visited).toEqual([5, 1, 3, 0]);
     })
 })

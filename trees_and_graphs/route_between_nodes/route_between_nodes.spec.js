@@ -5,7 +5,7 @@ describe('route_between_nodes', function() {
   beforeEach(function () {
       graph = new DirectedGraph();
   });
-  it('can connect nodes', function () {
+  xit('can connect nodes', function () {
     graph.add(0)
     .add(1)
     .add(2)
@@ -23,7 +23,7 @@ describe('route_between_nodes', function() {
     expect(graph.nodes[4].children.length).toBe(1);
     expect(graph.nodes[5].children.length).toBe(2);
 })
-it('works', function () {
+xit('works', function () {
   graph.add(0)
   .add(1)
   .add(2)
@@ -61,7 +61,7 @@ it('works', function () {
   clearVisitedValues(graph.nodes)
   expect(route_between_nodes(graph.nodes[5], graph.nodes[3])).toBe(true);
 })
-it('doesnt work if start and end are swapped', function () {
+xit('doesnt work if start and end are swapped', function () {
   graph.add(0)
   .add(1)
   .add(2)
@@ -80,7 +80,7 @@ it('doesnt work if start and end are swapped', function () {
   expect(route_between_nodes(graph.nodes[3], graph.nodes[4])).toBe(false);
   expect(route_between_nodes(graph.nodes[0], graph.nodes[4])).toBe(false);
 })
-it('only works in direction of graph', function () {
+xit('only works in direction of graph', function () {
   graph.add(0)
   .add(1)
   .add(2)
