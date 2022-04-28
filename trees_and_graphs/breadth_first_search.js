@@ -1,10 +1,10 @@
-const breadth_first_search = function (node, visiter) {
+const breadth_first_search = function (node, visitor) {
     let queue = [];
     queue.push(node)
     let current;
     while (queue.length) {
       current = queue.shift();
-      visiter(current)
+      visitor(current)
       current.visited = true;
       if (current.children && current.children.length) {
           current.children.forEach((child) => {

@@ -1,5 +1,5 @@
 const route_between_nodes = require('./route_between_nodes')
-const {DirectedGraph, Node} =require('../directed_graph.js')
+const {DirectedGraph, Node} = require('../directed_graph.js')
 describe('route_between_nodes', function() {
   let graph;
   beforeEach(function () {
