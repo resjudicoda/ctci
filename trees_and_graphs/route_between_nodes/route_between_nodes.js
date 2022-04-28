@@ -18,7 +18,7 @@ const route_between_nodes = function(start, end) {
       if (current.children && current.children.length) {
         current.children.forEach((child) => {
           if (!child.visited) {
-            child.visited = true;
+            //child.visited = true;
             queue.push(child);
           }
         })
