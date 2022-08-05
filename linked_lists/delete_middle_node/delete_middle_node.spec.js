@@ -25,7 +25,7 @@ describe('delete_middle_node', function() {
     )
   });
 
-  it('can call a function on each node', function() {
+  xit('can call a function on each node', function() {
     list.addToTail(testItem).addToTail({id: 002}).addToTail({id: 003});
     const ids = [];
     const getIds = (node) => {
@@ -35,7 +35,7 @@ describe('delete_middle_node', function() {
     expect(ids).toEqual([001, 002, 003])
   });
 
-  it('works', function() {
+  xit('works', function() {
     list.addToTail('a').addToTail('b').addToTail('c').addToTail('d').addToTail('e').addToTail('f');
     
     const items = [];

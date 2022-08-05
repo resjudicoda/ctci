@@ -1,6 +1,6 @@
 const triple_step = require('./triple_step')
 describe('triple_step', function() {
-  xit('handles base case 0', function() {
+  it('handles base case 0', function() {
     expect(triple_step(0)).toBeInstanceOf(Number);
   });
   xit('works', function() {
